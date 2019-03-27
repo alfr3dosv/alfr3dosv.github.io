@@ -24,7 +24,7 @@ github_username:  alfr3dosv
 host: 0.0.0.0
 # Build settings
 markdown: kramdown
-theme: minima
+theme: jekyll-theme-minimal
 source: src
 plugins:
   - jekyll-feed
