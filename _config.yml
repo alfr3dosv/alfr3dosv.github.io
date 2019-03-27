@@ -25,6 +25,7 @@ host: 0.0.0.0
 # Build settings
 markdown: kramdown
 theme: minima
+source: src
 plugins:
   - jekyll-feed
 
