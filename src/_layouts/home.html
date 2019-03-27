@@ -1,0 +1,41 @@
+---
+layout: default
+---
+{% for post in site.posts %}
+<div class="">
+    <div class="post-description container" style="position: relative; margin-bottom: 10px">
+        <div class="fecha">
+            <span class="mes">
+                {% assign m = post.date | date: "%-m" %}
+                {% case m %}
+                {% when '1' %}Ene
+                {% when '2' %}Feb
+                {% when '3' %}Mar
+                {% when '4' %}Ab
+                {% when '5' %}May
+                {% when '6' %}Jun
+                {% when '7' %}Jul
+                {% when '8' %}Ago
+                {% when '9' %}Sep
+                {% when '10' %}Oct
+                {% when '11' %}Nov
+                {% when '12' %}Dic
+                {% endcase %}
+            </span>
+            <span class="dia">{{ post.date | date: "%-d" }}</span>
+            <span class="ano">{{ post.date | date: "%Y" }}</span>
+        </div>
+        <h1 class="title">
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h1>
+
+        <div class="description">
+            {{ post.content | truncate:500 }}
+            <br>
+            <a href="{{ post.url | relative_url }}">Leer mas...</a>
+        </div>
+        <!--{{ post.content }}-->
+
+    </div>
+</div>
+{% endfor %}

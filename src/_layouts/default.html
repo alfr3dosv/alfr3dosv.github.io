@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: " en" }}">
+<head>
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="/assets/main.css">
+</head>
+<body>
+<div class="site-header container">
+    <h1 class="title">
+        <span>> Alfredo Soto Vargas<span class="parpadear">&nbsp</span></span>
+    </h1>
+    <div class="menu" style="float: none;">
+        <a href="{{ '/' | relative_url }}">Blog </a> |
+        <a href="{{ '/acerca-de-mi' | relative_url }}">Acerca de mi</a> |
+        <a href="">Proyectos</a> |
+        <a href="">Contactarme</a>
+    </div>
+    <hr style="clear: both">
+</div>
+    {{ content }}
+</body>
+</html>

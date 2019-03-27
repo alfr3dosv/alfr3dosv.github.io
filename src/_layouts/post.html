@@ -1,0 +1,55 @@
+---
+layout: default
+---
+<div class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <div class="container">
+        <div class="fecha">
+            <span class="mes">
+                {% assign m = page.date | date: "%-m" %}
+                {% case m %}
+                {% when '1' %}Ene
+                {% when '2' %}Feb
+                {% when '3' %}Mar
+                {% when '4' %}Ab
+                {% when '5' %}May
+                {% when '6' %}Jun
+                {% when '7' %}Jul
+                {% when '8' %}Ago
+                {% when '9' %}Sep
+                {% when '10' %}Oct
+                {% when '11' %}Nov
+                {% when '12' %}Dic
+                {% endcase %}
+            </span>
+            <span class="dia">{{ page.date | date: "%-d" }}</span>
+            <span class="ano">{{ page.date | date: "%Y" }}</span>
+        </div>
+        <div class="title-container">
+            <h1 class="title" itemprop="name headline">{{ page.title | escape }} </h1>
+            <span>Tags: </span>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="post">
+        <!--<p class="post-meta">-->
+        <!--<time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">-->
+        <!--{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}-->
+        <!--{{ page.date | date: date_format }}-->
+        <!--</time>-->
+        <!--{%- if page.author -%}-->
+        <!--• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author | escape }}</span></span>-->
+        <!--{%- endif -%}</p>-->
+
+        <div class="contenido" itemprop="articleBody">
+            {{ content }}
+        </div>
+
+        {%- if site.disqus.shortname -%}
+        {%- include disqus_comments.html -%}
+        {%- endif -%}
+
+        <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+    </div>
+</div>
+</div>

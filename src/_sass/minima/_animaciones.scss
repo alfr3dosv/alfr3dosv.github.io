@@ -1,0 +1,14 @@
+.parpadear {
+  //font-weight: ;
+  background: #000;
+  width: 5px;
+  margin-left: 3px;
+  display: inline-block;
+  animation: blink-animation 1s steps(2, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
