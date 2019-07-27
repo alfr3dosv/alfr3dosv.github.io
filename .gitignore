@@ -1,7 +1,1 @@
-_site
-.sass-cache
-.jekyll-metadata
-tmp
-*.iml
-*.code-workspace
-.idea
+Gemfile.lock
